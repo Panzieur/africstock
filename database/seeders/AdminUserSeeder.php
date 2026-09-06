@@ -11,20 +11,21 @@ class AdminUserSeeder extends Seeder
 {
     public function run(): void
     {
-        // Créer le rôle Administrateur s'il n'existe pas encore
-        $adminRole = Role::firstOrCreate(['name' => 'Administrateur']);
+        $superAdminRole = Role::firstOrCreate([
+            'name' => 'super-admin',
+            'guard_name' => 'web',
+        ]);
 
-        // Créer le compte admin s'il n'existe pas déjà
         $admin = User::firstOrCreate(
-            ['email' => 'koukpessovenceslas@gmail.com'],
+            ['email' => 'admin@africstock.com'],
             [
                 'name' => 'Administrateur',
-                'password' => Hash::make('africstok2026@'),
+                'password' => Hash::make('ChangeMoi123!'),
                 'is_active' => true,
                 'email_verified_at' => now(),
             ]
         );
 
-        $admin->assignRole($adminRole);
+        $admin->assignRole($superAdminRole);
     }
 }
