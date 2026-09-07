@@ -22,7 +22,7 @@
     </x-slot>
 
     <div class="py-5">
-        <div class="mx-auto max-w-7xl space-y-5 px-4 sm:px-6 lg:px-8">
+        <div class="px-4 mx-auto space-y-5 max-w-7xl sm:px-6 lg:px-8">
 
             {{-- ========================================================= --}}
             {{-- ADMIN / SUPER-ADMIN --}}
@@ -33,7 +33,7 @@
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
 
                     {{-- Produits --}}
-                    <div class="overflow-hidden rounded-lg bg-white p-4 shadow-sm dark:bg-gray-800">
+                    <div class="p-4 overflow-hidden bg-white rounded-lg shadow-sm dark:bg-gray-800">
                         <div class="flex items-center justify-between">
                             <div>
                                 <p class="text-xs font-medium text-gray-500 dark:text-gray-400">
@@ -44,8 +44,8 @@
                                 </p>
                             </div>
 
-                            <div class="rounded-lg bg-blue-100 p-2 dark:bg-blue-900/30">
-                                <svg class="h-5 w-5 text-blue-600 dark:text-blue-400"
+                            <div class="p-2 bg-blue-100 rounded-lg dark:bg-blue-900/30">
+                                <svg class="w-5 h-5 text-blue-600 dark:text-blue-400"
                                      fill="none"
                                      stroke="currentColor"
                                      viewBox="0 0 24 24">
@@ -59,7 +59,7 @@
                     </div>
 
                     {{-- Stock total --}}
-                    <div class="overflow-hidden rounded-lg bg-white p-4 shadow-sm dark:bg-gray-800">
+                    <div class="p-4 overflow-hidden bg-white rounded-lg shadow-sm dark:bg-gray-800">
                         <div class="flex items-center justify-between">
                             <div>
                                 <p class="text-xs font-medium text-gray-500 dark:text-gray-400">
@@ -70,8 +70,8 @@
                                 </p>
                             </div>
 
-                            <div class="rounded-lg bg-green-100 p-2 dark:bg-green-900/30">
-                                <svg class="h-5 w-5 text-green-600 dark:text-green-400"
+                            <div class="p-2 bg-green-100 rounded-lg dark:bg-green-900/30">
+                                <svg class="w-5 h-5 text-green-600 dark:text-green-400"
                                      fill="none"
                                      stroke="currentColor"
                                      viewBox="0 0 24 24">
@@ -85,7 +85,7 @@
                     </div>
 
                     {{-- Ventes --}}
-                    <div class="overflow-hidden rounded-lg bg-white p-4 shadow-sm dark:bg-gray-800">
+                    <div class="p-4 overflow-hidden bg-white rounded-lg shadow-sm dark:bg-gray-800">
                         <div class="flex items-center justify-between">
                             <div>
                                 <p class="text-xs font-medium text-gray-500 dark:text-gray-400">
@@ -96,8 +96,8 @@
                                 </p>
                             </div>
 
-                            <div class="rounded-lg bg-purple-100 p-2 dark:bg-purple-900/30">
-                                <svg class="h-5 w-5 text-purple-600 dark:text-purple-400"
+                            <div class="p-2 bg-purple-100 rounded-lg dark:bg-purple-900/30">
+                                <svg class="w-5 h-5 text-purple-600 dark:text-purple-400"
                                      fill="none"
                                      stroke="currentColor"
                                      viewBox="0 0 24 24">
@@ -111,7 +111,7 @@
                     </div>
 
                     {{-- CA --}}
-                    <div class="overflow-hidden rounded-lg bg-white p-4 shadow-sm dark:bg-gray-800">
+                    <div class="p-4 overflow-hidden bg-white rounded-lg shadow-sm dark:bg-gray-800">
                         <div class="flex items-center justify-between">
                             <div>
                                 <p class="text-xs font-medium text-gray-500 dark:text-gray-400">
@@ -122,8 +122,8 @@
                                 </p>
                             </div>
 
-                            <div class="rounded-lg bg-emerald-100 p-2 dark:bg-emerald-900/30">
-                                <svg class="h-5 w-5 text-emerald-600 dark:text-emerald-400"
+                            <div class="p-2 rounded-lg bg-emerald-100 dark:bg-emerald-900/30">
+                                <svg class="w-5 h-5 text-emerald-600 dark:text-emerald-400"
                                      fill="none"
                                      stroke="currentColor"
                                      viewBox="0 0 24 24">
@@ -139,9 +139,9 @@
 
                 {{-- Alerte stock faible --}}
                 @if($lowStockProducts > 0)
-                    <div class="rounded-lg border border-amber-200 bg-amber-50 p-4 dark:border-amber-800 dark:bg-amber-900/20">
+                    <div class="p-4 border rounded-lg border-amber-200 bg-amber-50 dark:border-amber-800 dark:bg-amber-900/20">
                         <div class="flex items-center gap-3">
-                            <svg class="h-5 w-5 shrink-0 text-amber-600 dark:text-amber-400"
+                            <svg class="w-5 h-5 shrink-0 text-amber-600 dark:text-amber-400"
                                  fill="none"
                                  stroke="currentColor"
                                  viewBox="0 0 24 24">
@@ -167,8 +167,8 @@
                 <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
 
                     {{-- Stock faible --}}
-                    <div class="overflow-hidden rounded-lg bg-white shadow-sm dark:bg-gray-800">
-                        <div class="border-b border-gray-200 px-4 py-3 dark:border-gray-700">
+                    <div class="overflow-hidden bg-white rounded-lg shadow-sm dark:bg-gray-800">
+                        <div class="px-4 py-3 border-b border-gray-200 dark:border-gray-700">
                             <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
                                 Produits à stock faible
                             </h3>
@@ -178,7 +178,7 @@
                             @forelse($lowStockItems as $product)
                                 <div class="flex items-center justify-between px-4 py-3">
                                     <div class="min-w-0">
-                                        <p class="truncate text-sm font-medium text-gray-900 dark:text-white">
+                                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
                                             {{ $product->name }}
                                         </p>
 
@@ -192,7 +192,7 @@
                                     </span>
                                 </div>
                             @empty
-                                <div class="px-4 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
+                                <div class="px-4 py-6 text-sm text-center text-gray-500 dark:text-gray-400">
                                     Aucun produit en stock faible.
                                 </div>
                             @endforelse
@@ -200,8 +200,8 @@
                     </div>
 
                     {{-- Dernières ventes --}}
-                    <div class="overflow-hidden rounded-lg bg-white shadow-sm dark:bg-gray-800">
-                        <div class="border-b border-gray-200 px-4 py-3 dark:border-gray-700">
+                    <div class="overflow-hidden bg-white rounded-lg shadow-sm dark:bg-gray-800">
+                        <div class="px-4 py-3 border-b border-gray-200 dark:border-gray-700">
                             <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
                                 Dernières ventes
                             </h3>
@@ -211,20 +211,20 @@
                             @forelse($recentSales as $sale)
                                 <div class="flex items-center justify-between gap-3 px-4 py-3">
                                     <div class="min-w-0">
-                                        <p class="truncate text-sm font-medium text-gray-900 dark:text-white">
+                                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
                                             @foreach($sale->items as $item)
                                                 {{ $item->product?->name ?? 'Produit supprimé' }} × {{ $item->quantity }}@if(!$loop->last), @endif
                                             @endforeach
                                         </p>
 
-                                        <p class="truncate text-xs text-gray-500 dark:text-gray-400">
+                                        <p class="text-xs text-gray-500 truncate dark:text-gray-400">
                                             {{ $sale->customer?->name ?? 'Client comptoir' }}
                                             · {{ $sale->user?->name ?? 'Utilisateur' }}
                                             · Vente #{{ $sale->id }}
                                         </p>
                                     </div>
 
-                                    <div class="shrink-0 text-right">
+                                    <div class="text-right shrink-0">
                                         <p class="text-sm font-semibold text-gray-900 dark:text-white">
                                             {{ number_format($sale->total, 0, ',', ' ') }} F
                                         </p>
@@ -235,7 +235,7 @@
                                     </div>
                                 </div>
                             @empty
-                                <div class="px-4 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
+                                <div class="px-4 py-6 text-sm text-center text-gray-500 dark:text-gray-400">
                                     Aucune vente récente.
                                 </div>
                             @endforelse
@@ -244,9 +244,9 @@
                 </div>
 
                 {{-- Clients ayant des dettes --}}
-                <div class="overflow-hidden rounded-lg bg-white shadow-sm dark:bg-gray-800">
+                <div class="overflow-hidden bg-white rounded-lg shadow-sm dark:bg-gray-800">
 
-                    <div class="flex items-center justify-between border-b border-gray-200 px-4 py-3 dark:border-gray-700">
+                    <div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-700">
 
                         <div>
                             <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
@@ -280,7 +280,7 @@
 
                                 <div class="min-w-0">
 
-                                    <p class="truncate text-sm font-semibold text-gray-900 dark:text-white">
+                                    <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
                                         {{ $sale->customer?->name ?? 'Client inconnu' }}
                                     </p>
 
@@ -292,7 +292,7 @@
 
                                 </div>
 
-                                <div class="shrink-0 text-right">
+                                <div class="text-right shrink-0">
 
                                     <p class="text-sm font-bold text-red-600 dark:text-red-400">
                                         {{ number_format($remainingAmount, 0, ',', ' ') }} F
@@ -318,7 +318,7 @@
 
                         @empty
 
-                            <div class="px-4 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
+                            <div class="px-4 py-6 text-sm text-center text-gray-500 dark:text-gray-400">
                                 Aucun client n'a actuellement de dette.
                             </div>
 
@@ -329,8 +329,8 @@
                 </div>
 
                 {{-- Mouvements de stock --}}
-                <div class="overflow-hidden rounded-lg bg-white shadow-sm dark:bg-gray-800">
-                    <div class="border-b border-gray-200 px-4 py-3 dark:border-gray-700">
+                <div class="overflow-hidden bg-white rounded-lg shadow-sm dark:bg-gray-800">
+                    <div class="px-4 py-3 border-b border-gray-200 dark:border-gray-700">
                         <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
                             Derniers mouvements de stock
                         </h3>
@@ -364,15 +364,15 @@
 
                                         <td class="px-4 py-2.5">
                                             @if($movement->type === 'entry')
-                                                <span class="rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">
+                                                <span class="px-2 py-1 text-xs font-medium text-green-700 bg-green-100 rounded-full dark:bg-green-900/30 dark:text-green-400">
                                                     Entrée
                                                 </span>
                                             @elseif($movement->type === 'exit')
-                                                <span class="rounded-full bg-red-100 px-2 py-1 text-xs font-medium text-red-700 dark:bg-red-900/30 dark:text-red-400">
+                                                <span class="px-2 py-1 text-xs font-medium text-red-700 bg-red-100 rounded-full dark:bg-red-900/30 dark:text-red-400">
                                                     Sortie
                                                 </span>
                                             @else
-                                                <span class="rounded-full bg-amber-100 px-2 py-1 text-xs font-medium text-amber-700 dark:bg-amber-900/30 dark:text-amber-400">
+                                                <span class="px-2 py-1 text-xs font-medium rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400">
                                                     Ajustement
                                                 </span>
                                             @endif
@@ -388,7 +388,7 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="4" class="px-4 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
+                                        <td colspan="4" class="px-4 py-6 text-sm text-center text-gray-500 dark:text-gray-400">
                                             Aucun mouvement récent.
                                         </td>
                                     </tr>
@@ -407,7 +407,7 @@
                 {{-- Statistiques vendeur --}}
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
 
-                    <div class="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-800">
+                    <div class="p-4 bg-white rounded-lg shadow-sm dark:bg-gray-800">
                         <p class="text-xs font-medium text-gray-500 dark:text-gray-400">
                             Mes ventes aujourd'hui
                         </p>
@@ -417,7 +417,7 @@
                         </p>
                     </div>
 
-                    <div class="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-800">
+                    <div class="p-4 bg-white rounded-lg shadow-sm dark:bg-gray-800">
                         <p class="text-xs font-medium text-gray-500 dark:text-gray-400">
                             Mon chiffre d'affaires
                         </p>
@@ -427,7 +427,7 @@
                         </p>
                     </div>
 
-                    <div class="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-800">
+                    <div class="p-4 bg-white rounded-lg shadow-sm dark:bg-gray-800">
                         <p class="text-xs font-medium text-gray-500 dark:text-gray-400">
                             Paiements encaissés
                         </p>
@@ -442,8 +442,8 @@
                 <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
 
                     {{-- Mes dernières ventes --}}
-                    <div class="overflow-hidden rounded-lg bg-white shadow-sm dark:bg-gray-800">
-                        <div class="border-b border-gray-200 px-4 py-3 dark:border-gray-700">
+                    <div class="overflow-hidden bg-white rounded-lg shadow-sm dark:bg-gray-800">
+                        <div class="px-4 py-3 border-b border-gray-200 dark:border-gray-700">
                             <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
                                 Mes dernières ventes
                             </h3>
@@ -453,19 +453,19 @@
                             @forelse($recentSales as $sale)
                                 <div class="flex items-center justify-between gap-3 px-4 py-3">
                                     <div class="min-w-0">
-                                        <p class="truncate text-sm font-medium text-gray-900 dark:text-white">
+                                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
                                             @foreach($sale->items as $item)
                                                 {{ $item->product?->name ?? 'Produit supprimé' }} × {{ $item->quantity }}@if(!$loop->last), @endif
                                             @endforeach
                                         </p>
 
-                                        <p class="truncate text-xs text-gray-500 dark:text-gray-400">
+                                        <p class="text-xs text-gray-500 truncate dark:text-gray-400">
                                             {{ $sale->customer?->name ?? 'Client comptoir' }}
                                             · Vente #{{ $sale->id }}
                                         </p>
                                     </div>
 
-                                    <div class="shrink-0 text-right">
+                                    <div class="text-right shrink-0">
                                         <p class="text-sm font-semibold text-gray-900 dark:text-white">
                                             {{ number_format($sale->total, 0, ',', ' ') }} F
                                         </p>
@@ -476,7 +476,7 @@
                                     </div>
                                 </div>
                             @empty
-                                <div class="px-4 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
+                                <div class="px-4 py-6 text-sm text-center text-gray-500 dark:text-gray-400">
                                     Aucune vente récente.
                                 </div>
                             @endforelse
@@ -484,8 +484,8 @@
                     </div>
 
                     {{-- Mes derniers paiements --}}
-                    <div class="overflow-hidden rounded-lg bg-white shadow-sm dark:bg-gray-800">
-                        <div class="border-b border-gray-200 px-4 py-3 dark:border-gray-700">
+                    <div class="overflow-hidden bg-white rounded-lg shadow-sm dark:bg-gray-800">
+                        <div class="px-4 py-3 border-b border-gray-200 dark:border-gray-700">
                             <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
                                 Mes derniers paiements
                             </h3>
@@ -495,7 +495,7 @@
                             @forelse($recentPayments as $payment)
                                 <div class="flex items-center justify-between gap-3 px-4 py-3">
                                     <div class="min-w-0">
-                                        <p class="truncate text-sm font-medium text-gray-900 dark:text-white">
+                                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
                                             @if($payment->sale)
                                                 @foreach($payment->sale->items as $item)
                                                     {{ $item->product?->name ?? 'Produit supprimé' }} × {{ $item->quantity }}@if(!$loop->last), @endif
@@ -505,7 +505,7 @@
                                             @endif
                                         </p>
 
-                                        <p class="truncate text-xs text-gray-500 dark:text-gray-400">
+                                        <p class="text-xs text-gray-500 truncate dark:text-gray-400">
                                             {{ $payment->method ?? 'Paiement' }}
 
                                             @if($payment->sale)
@@ -514,7 +514,7 @@
                                         </p>
                                     </div>
 
-                                    <div class="shrink-0 text-right">
+                                    <div class="text-right shrink-0">
                                         <p class="text-sm font-semibold text-green-600 dark:text-green-400">
                                             +{{ number_format($payment->amount, 0, ',', ' ') }} F
                                         </p>
@@ -525,7 +525,7 @@
                                     </div>
                                 </div>
                             @empty
-                                <div class="px-4 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
+                                <div class="px-4 py-6 text-sm text-center text-gray-500 dark:text-gray-400">
                                     Aucun paiement récent.
                                 </div>
                             @endforelse
@@ -542,7 +542,7 @@
                 {{-- Statistiques stock --}}
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
 
-                    <div class="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-800">
+                    <div class="p-4 bg-white rounded-lg shadow-sm dark:bg-gray-800">
                         <p class="text-xs font-medium text-gray-500 dark:text-gray-400">
                             Produits
                         </p>
@@ -551,7 +551,7 @@
                         </p>
                     </div>
 
-                    <div class="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-800">
+                    <div class="p-4 bg-white rounded-lg shadow-sm dark:bg-gray-800">
                         <p class="text-xs font-medium text-gray-500 dark:text-gray-400">
                             Stock total
                         </p>
@@ -560,7 +560,7 @@
                         </p>
                     </div>
 
-                    <div class="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-800">
+                    <div class="p-4 bg-white rounded-lg shadow-sm dark:bg-gray-800">
                         <p class="text-xs font-medium text-gray-500 dark:text-gray-400">
                             Entrées aujourd'hui
                         </p>
@@ -569,7 +569,7 @@
                         </p>
                     </div>
 
-                    <div class="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-800">
+                    <div class="p-4 bg-white rounded-lg shadow-sm dark:bg-gray-800">
                         <p class="text-xs font-medium text-gray-500 dark:text-gray-400">
                             Sorties aujourd'hui
                         </p>
@@ -581,7 +581,7 @@
 
                 {{-- Alerte stock --}}
                 @if($lowStockProducts > 0)
-                    <div class="rounded-lg border border-amber-200 bg-amber-50 p-4 dark:border-amber-800 dark:bg-amber-900/20">
+                    <div class="p-4 border rounded-lg border-amber-200 bg-amber-50 dark:border-amber-800 dark:bg-amber-900/20">
                         <p class="text-sm font-semibold text-amber-800 dark:text-amber-300">
                             {{ $lowStockProducts }} produit(s) nécessitent une attention.
                         </p>
@@ -592,8 +592,8 @@
                 <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
 
                     {{-- Produits stock faible --}}
-                    <div class="overflow-hidden rounded-lg bg-white shadow-sm dark:bg-gray-800">
-                        <div class="border-b border-gray-200 px-4 py-3 dark:border-gray-700">
+                    <div class="overflow-hidden bg-white rounded-lg shadow-sm dark:bg-gray-800">
+                        <div class="px-4 py-3 border-b border-gray-200 dark:border-gray-700">
                             <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
                                 Produits à stock faible
                             </h3>
@@ -603,7 +603,7 @@
                             @forelse($lowStockItems as $product)
                                 <div class="flex items-center justify-between px-4 py-3">
                                     <div class="min-w-0">
-                                        <p class="truncate text-sm font-medium text-gray-900 dark:text-white">
+                                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
                                             {{ $product->name }}
                                         </p>
 
@@ -617,7 +617,7 @@
                                     </span>
                                 </div>
                             @empty
-                                <div class="px-4 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
+                                <div class="px-4 py-6 text-sm text-center text-gray-500 dark:text-gray-400">
                                     Aucun produit en stock faible.
                                 </div>
                             @endforelse
@@ -625,8 +625,8 @@
                     </div>
 
                     {{-- Derniers mouvements --}}
-                    <div class="overflow-hidden rounded-lg bg-white shadow-sm dark:bg-gray-800">
-                        <div class="border-b border-gray-200 px-4 py-3 dark:border-gray-700">
+                    <div class="overflow-hidden bg-white rounded-lg shadow-sm dark:bg-gray-800">
+                        <div class="px-4 py-3 border-b border-gray-200 dark:border-gray-700">
                             <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
                                 Derniers mouvements
                             </h3>
@@ -636,7 +636,7 @@
                             @forelse($recentMovements as $movement)
                                 <div class="flex items-center justify-between gap-3 px-4 py-3">
                                     <div class="min-w-0">
-                                        <p class="truncate text-sm font-medium text-gray-900 dark:text-white">
+                                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
                                             {{ $movement->product?->name ?? 'Produit supprimé' }}
                                         </p>
 
@@ -645,7 +645,7 @@
                                         </p>
                                     </div>
 
-                                    <div class="shrink-0 text-right">
+                                    <div class="text-right shrink-0">
                                         @if($movement->type === 'entry')
                                             <p class="text-sm font-semibold text-green-600 dark:text-green-400">
                                                 +{{ $movement->quantity }}
@@ -666,7 +666,7 @@
                                     </div>
                                 </div>
                             @empty
-                                <div class="px-4 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
+                                <div class="px-4 py-6 text-sm text-center text-gray-500 dark:text-gray-400">
                                     Aucun mouvement récent.
                                 </div>
                             @endforelse
@@ -683,7 +683,7 @@
                 {{-- Statistiques financières --}}
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
 
-                    <div class="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-800">
+                    <div class="p-4 bg-white rounded-lg shadow-sm dark:bg-gray-800">
                         <p class="text-xs font-medium text-gray-500 dark:text-gray-400">
                             Ventes
                         </p>
@@ -693,7 +693,7 @@
                         </p>
                     </div>
 
-                    <div class="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-800">
+                    <div class="p-4 bg-white rounded-lg shadow-sm dark:bg-gray-800">
                         <p class="text-xs font-medium text-gray-500 dark:text-gray-400">
                             Encaissements
                         </p>
@@ -703,7 +703,7 @@
                         </p>
                     </div>
 
-                    <div class="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-800">
+                    <div class="p-4 bg-white rounded-lg shadow-sm dark:bg-gray-800">
                         <p class="text-xs font-medium text-gray-500 dark:text-gray-400">
                             Crédit estimé
                         </p>
@@ -713,7 +713,7 @@
                         </p>
                     </div>
 
-                    <div class="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-800">
+                    <div class="p-4 bg-white rounded-lg shadow-sm dark:bg-gray-800">
                         <p class="text-xs font-medium text-gray-500 dark:text-gray-400">
                             Remboursements
                         </p>
@@ -728,8 +728,8 @@
                 <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
 
                     {{-- Dernières ventes --}}
-                    <div class="overflow-hidden rounded-lg bg-white shadow-sm dark:bg-gray-800">
-                        <div class="flex items-center justify-between border-b border-gray-200 px-4 py-3 dark:border-gray-700">
+                    <div class="overflow-hidden bg-white rounded-lg shadow-sm dark:bg-gray-800">
+                        <div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-700">
                             <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
                                 Dernières ventes
                             </h3>
@@ -746,20 +746,20 @@
                             @forelse($recentSales as $sale)
                                 <div class="flex items-center justify-between gap-3 px-4 py-3">
                                     <div class="min-w-0">
-                                        <p class="truncate text-sm font-medium text-gray-900 dark:text-white">
+                                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
                                             @foreach($sale->items as $item)
                                                 {{ $item->product?->name ?? 'Produit supprimé' }} × {{ $item->quantity }}@if(!$loop->last), @endif
                                             @endforeach
                                         </p>
 
-                                        <p class="truncate text-xs text-gray-500 dark:text-gray-400">
+                                        <p class="text-xs text-gray-500 truncate dark:text-gray-400">
                                             {{ $sale->customer?->name ?? 'Client comptoir' }}
                                             · {{ $sale->user?->name ?? 'Utilisateur' }}
                                             · Vente #{{ $sale->id }}
                                         </p>
                                     </div>
 
-                                    <div class="shrink-0 text-right">
+                                    <div class="text-right shrink-0">
                                         <p class="text-sm font-semibold text-gray-900 dark:text-white">
                                             {{ number_format($sale->total, 0, ',', ' ') }} F
                                         </p>
@@ -770,7 +770,7 @@
                                     </div>
                                 </div>
                             @empty
-                                <div class="px-4 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
+                                <div class="px-4 py-6 text-sm text-center text-gray-500 dark:text-gray-400">
                                     Aucune vente récente.
                                 </div>
                             @endforelse
@@ -778,8 +778,8 @@
                     </div>
 
                     {{-- Derniers encaissements --}}
-                    <div class="overflow-hidden rounded-lg bg-white shadow-sm dark:bg-gray-800">
-                        <div class="border-b border-gray-200 px-4 py-3 dark:border-gray-700">
+                    <div class="overflow-hidden bg-white rounded-lg shadow-sm dark:bg-gray-800">
+                        <div class="px-4 py-3 border-b border-gray-200 dark:border-gray-700">
                             <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
                                 Derniers encaissements
                             </h3>
@@ -789,7 +789,7 @@
                             @forelse($recentPayments as $payment)
                                 <div class="flex items-center justify-between gap-3 px-4 py-3">
                                     <div class="min-w-0">
-                                        <p class="truncate text-sm font-medium text-gray-900 dark:text-white">
+                                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
                                             @if($payment->sale)
                                                 @foreach($payment->sale->items as $item)
                                                     {{ $item->product?->name ?? 'Produit supprimé' }} × {{ $item->quantity }}@if(!$loop->last), @endif
@@ -799,7 +799,7 @@
                                             @endif
                                         </p>
 
-                                        <p class="truncate text-xs text-gray-500 dark:text-gray-400">
+                                        <p class="text-xs text-gray-500 truncate dark:text-gray-400">
                                             {{ $payment->method ?? 'Paiement' }}
 
                                             @if($payment->sale)
@@ -809,7 +809,7 @@
                                         </p>
                                     </div>
 
-                                    <div class="shrink-0 text-right">
+                                    <div class="text-right shrink-0">
                                         <p class="text-sm font-semibold text-green-600 dark:text-green-400">
                                             +{{ number_format($payment->amount, 0, ',', ' ') }} F
                                         </p>
@@ -820,7 +820,7 @@
                                     </div>
                                 </div>
                             @empty
-                                <div class="px-4 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
+                                <div class="px-4 py-6 text-sm text-center text-gray-500 dark:text-gray-400">
                                     Aucun encaissement récent.
                                 </div>
                             @endforelse
@@ -829,9 +829,9 @@
                 </div>
 
                 {{-- Clients ayant des dettes --}}
-                <div class="overflow-hidden rounded-lg bg-white shadow-sm dark:bg-gray-800">
+                <div class="overflow-hidden bg-white rounded-lg shadow-sm dark:bg-gray-800">
 
-                    <div class="flex items-center justify-between border-b border-gray-200 px-4 py-3 dark:border-gray-700">
+                    <div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-700">
 
                         <div>
                             <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
@@ -865,7 +865,7 @@
 
                                 <div class="min-w-0">
 
-                                    <p class="truncate text-sm font-semibold text-gray-900 dark:text-white">
+                                    <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
                                         {{ $sale->customer?->name ?? 'Client inconnu' }}
                                     </p>
 
@@ -877,7 +877,7 @@
 
                                 </div>
 
-                                <div class="shrink-0 text-right">
+                                <div class="text-right shrink-0">
 
                                     <p class="text-sm font-bold text-red-600 dark:text-red-400">
                                         {{ number_format($remainingAmount, 0, ',', ' ') }} F
@@ -903,7 +903,7 @@
 
                         @empty
 
-                            <div class="px-4 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
+                            <div class="px-4 py-6 text-sm text-center text-gray-500 dark:text-gray-400">
                                 Aucun client n'a actuellement de dette.
                             </div>
 
@@ -922,7 +922,7 @@
                 {{-- Statistiques --}}
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
 
-                    <div class="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-800">
+                    <div class="p-4 bg-white rounded-lg shadow-sm dark:bg-gray-800">
                         <p class="text-xs font-medium text-gray-500 dark:text-gray-400">
                             Produits
                         </p>
@@ -932,7 +932,7 @@
                         </p>
                     </div>
 
-                    <div class="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-800">
+                    <div class="p-4 bg-white rounded-lg shadow-sm dark:bg-gray-800">
                         <p class="text-xs font-medium text-gray-500 dark:text-gray-400">
                             Stock total
                         </p>
@@ -942,7 +942,7 @@
                         </p>
                     </div>
 
-                    <div class="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-800">
+                    <div class="p-4 bg-white rounded-lg shadow-sm dark:bg-gray-800">
                         <p class="text-xs font-medium text-gray-500 dark:text-gray-400">
                             Stock faible
                         </p>
@@ -954,8 +954,8 @@
                 </div>
 
                 {{-- Dernières ventes --}}
-                <div class="overflow-hidden rounded-lg bg-white shadow-sm dark:bg-gray-800">
-                    <div class="border-b border-gray-200 px-4 py-3 dark:border-gray-700">
+                <div class="overflow-hidden bg-white rounded-lg shadow-sm dark:bg-gray-800">
+                    <div class="px-4 py-3 border-b border-gray-200 dark:border-gray-700">
                         <h3 class="text-sm font-semibold text-gray-900 dark:text-white">
                             Dernières ventes
                         </h3>
@@ -965,19 +965,19 @@
                         @forelse($recentSales as $sale)
                             <div class="flex items-center justify-between gap-3 px-4 py-3">
                                 <div class="min-w-0">
-                                    <p class="truncate text-sm font-medium text-gray-900 dark:text-white">
+                                    <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
                                         @foreach($sale->items as $item)
                                             {{ $item->product?->name ?? 'Produit supprimé' }} × {{ $item->quantity }}@if(!$loop->last), @endif
                                         @endforeach
                                     </p>
 
-                                    <p class="truncate text-xs text-gray-500 dark:text-gray-400">
+                                    <p class="text-xs text-gray-500 truncate dark:text-gray-400">
                                         {{ $sale->customer?->name ?? 'Client comptoir' }}
                                         · Vente #{{ $sale->id }}
                                     </p>
                                 </div>
 
-                                <div class="shrink-0 text-right">
+                                <div class="text-right shrink-0">
                                     <p class="text-sm font-semibold text-gray-900 dark:text-white">
                                         {{ number_format($sale->total, 0, ',', ' ') }} F
                                     </p>
@@ -988,7 +988,7 @@
                                 </div>
                             </div>
                         @empty
-                            <div class="px-4 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
+                            <div class="px-4 py-6 text-sm text-center text-gray-500 dark:text-gray-400">
                                 Aucune vente récente.
                             </div>
                         @endforelse
