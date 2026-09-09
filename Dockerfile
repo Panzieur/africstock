@@ -2,13 +2,13 @@ FROM php:8.4-fpm
 
 # Installer les dépendances système + Node.js
 RUN apt-get update && apt-get install -y \
-    git curl libpng-dev libonig-dev libxml2-dev libzip-dev zip unzip \
+    git curl libpng-dev libonig-dev libxml2-dev libzip-dev libpq-dev zip unzip \
     nginx \
     && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
     && apt-get install -y nodejs
 
 # Installer les extensions PHP nécessaires à Laravel
-RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd zip
+RUN docker-php-ext-install pdo_mysql pdo_pgsql mbstring exif pcntl bcmath gd zip
 
 # Installer Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
